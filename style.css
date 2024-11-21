@@ -1,0 +1,55 @@
+/* Styling utama */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  background: #0f0c29; /* Warna tema keren */
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background animasi */
+.background-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #302b63, #0f0c29);
+  animation: gradientShift 8s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% { background: radial-gradient(circle, #302b63, #0f0c29); }
+  100% { background: radial-gradient(circle, #24243e, #141e30); }
+}
+
+/* Teks animasi */
+.text-container {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.animated-text {
+  font-size: 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s forwards;
+}
+
+.animated-text:nth-child(1) { animation-delay: 0s; }
+.animated-text:nth-child(2) { animation-delay: 3s; }
+.animated-text:nth-child(3) { animation-delay: 6s; }
+.animated-text:nth-child(4) { animation-delay: 9s; }
+.animated-text:nth-child(5) { animation-delay: 12s; }
+.animated-text:nth-child(6) { animation-delay: 15s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
